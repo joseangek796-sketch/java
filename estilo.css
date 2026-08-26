@@ -15,3 +15,9 @@ h1{
 .padre{
     color: #0B1B2B;
 }
+
+#logo{
+    width: 300px;
+    hight: 300px;
+    boder-radius: 50%;
+}
