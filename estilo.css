@@ -18,7 +18,7 @@ h1{
 
 #logo{
     width: 300px;
-    hight: 300px;
-    boder-radius: 50%;
-    txt-aling: center;
+    height: 300px;
+    border-radius: 50%;
+    padding: 10px;
 }
