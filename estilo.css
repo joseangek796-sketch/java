@@ -25,5 +25,9 @@ h1{
     margin: auto;
 }
 .hijo2, .hijo3{
-    display: flex;
+    background-color: #DEBC3F;
+    margin: 30px;
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 20px;
 }
