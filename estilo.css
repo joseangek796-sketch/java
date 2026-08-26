@@ -8,5 +8,7 @@ h1{
 .hijo{
     background-color: #D4A017;
     margin: 30px;
-    color: #0B1B2B
+}
+.padre{
+     color: #0B1B2B
 }
