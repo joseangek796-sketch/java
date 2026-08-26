@@ -1,12 +1,17 @@
 body{
-    background: linear-gradient(to right,#3498db,#0D1B2A);
-    
+    background: linear-gradient(to right,#3498db);
+    font-family:georgia, serif;
 }
 h1{
-    color: #000000;
+    color: #0B1B2B;
 }
 .hijo{
-    background-color: #D4A017;
+    background-color: #DEBC3F;
     margin: 30px;
-    color: #0B1B2B
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 20px;
+}
+.padre{
+    color: #0B1B2B;
 }
