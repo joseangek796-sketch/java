@@ -24,3 +24,6 @@ h1{
     display: block;
     margin: auto;
 }
+.hijo2, .hijo3{
+    display: flex;
+}
