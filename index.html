@@ -1,36 +1,48 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Inicio de sesión</title>
 
     <link rel="stylesheet" href="estilo.css">
-    <script src="script.js"></script>
+
 </head>
 
 <body>
 
     <div class="logo">
+
         <img src="img/ChatGPT Image 26 ago 2026, 12_27_02 p.m..png"
              alt="Logo"
              width="100"
              id="logo">
+
     </div>
+
 
     <div class="padre">
 
+
         <!-- INICIO DE SESIÓN -->
+
         <div class="hijo">
 
             <center>
+
                 <h1>Inicio</h1>
+
             </center>
 
+
             <center>
-                <form action="procesar.php" method="post">
+
+                <form onsubmit="iniciarSesion(event)">
 
                     <label for="username">Usuario:</label>
 
@@ -43,6 +55,7 @@
 
                     <br><br>
 
+
                     <label for="password">Contraseña:</label>
 
                     <input
@@ -54,22 +67,28 @@
 
                     <br><br>
 
+
                     <input
                         type="submit"
                         value="Iniciar sesión"
                     >
 
                 </form>
+
             </center>
 
         </div>
 
 
+
         <!-- REGISTRO -->
+
         <div class="hijo2">
 
             <center>
+
                 <h1>Registro</h1>
+
 
                 <label>Usuario:</label>
 
@@ -80,6 +99,7 @@
 
                 <br><br>
 
+
                 <label>Correo:</label>
 
                 <input
@@ -88,6 +108,7 @@
                 >
 
                 <br><br>
+
 
                 <label>Contraseña:</label>
 
@@ -98,6 +119,7 @@
 
                 <br><br>
 
+
                 <label>Confirmar contraseña:</label>
 
                 <input
@@ -107,15 +129,166 @@
 
                 <br><br>
 
+
                 <button onclick="registrar()">
+
                     Registrarse
+
                 </button>
+
 
             </center>
 
         </div>
 
     </div>
+
+
+
+    <script>
+
+        function registrar() {
+
+            let usuario = document.getElementById("usuarioRegistro").value;
+
+            let correo = document.getElementById("correoRegistro").value;
+
+            let contrasena = document.getElementById("contrasenaRegistro").value;
+
+            let confirmar = document.getElementById("confirmarRegistro").value;
+
+
+            // Verificar que no haya campos vacíos
+
+            if (
+                usuario == "" ||
+                correo == "" ||
+                contrasena == "" ||
+                confirmar == ""
+            ) {
+
+                alert("Debe llenar todos los campos");
+
+                return;
+
+            }
+
+
+            // Verificar contraseñas
+
+            if (contrasena != confirmar) {
+
+                alert("Las contraseñas no coinciden");
+
+                return;
+
+            }
+
+
+            // Obtener los usuarios guardados
+
+            let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+
+            // Verificar si el usuario ya existe
+
+            let usuarioExiste = usuarios.find(function(user) {
+
+                return user.usuario == usuario;
+
+            });
+
+
+            if (usuarioExiste) {
+
+                alert("Ese usuario ya existe");
+
+                return;
+
+            }
+
+
+            // Crear nuevo usuario
+
+            let nuevoUsuario = {
+
+                usuario: usuario,
+
+                correo: correo,
+
+                contrasena: contrasena
+
+            };
+
+
+            // Agregar usuario al arreglo
+
+            usuarios.push(nuevoUsuario);
+
+
+            // Guardar en localStorage
+
+            localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+
+            alert("Usuario registrado correctamente");
+
+
+            // Limpiar los campos
+
+            document.getElementById("usuarioRegistro").value = "";
+
+            document.getElementById("correoRegistro").value = "";
+
+            document.getElementById("contrasenaRegistro").value = "";
+
+            document.getElementById("confirmarRegistro").value = "";
+
+        }
+
+
+
+        function iniciarSesion(event) {
+
+            event.preventDefault();
+
+
+            let usuario = document.getElementById("username").value;
+
+            let contrasena = document.getElementById("password").value;
+
+
+            // Obtener usuarios guardados
+
+            let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+
+            // Buscar usuario y contraseña
+
+            let usuarioEncontrado = usuarios.find(function(user) {
+
+                return user.usuario == usuario &&
+                       user.contrasena == contrasena;
+
+            });
+
+
+            if (usuarioEncontrado) {
+
+                alert("Inicio de sesión correcto");
+
+                // Aquí puedes mandar al usuario a otra página
+                // window.location.href = "inicio.html";
+
+            } else {
+
+                alert("Usuario o contraseña incorrectos");
+
+            }
+
+        }
+
+    </script>
 
 
 </body>
