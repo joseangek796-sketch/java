@@ -6,11 +6,9 @@ function iniciarSesion(event) {
     let contrasena = document.getElementById("password").value;
 
 
-    // Obtener usuarios guardados
+    
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-
-    // Buscar si existe el usuario con esa contraseña
     let encontrado = usuarios.find(function(user) {
 
         return user.usuario == usuario &&
@@ -23,8 +21,7 @@ function iniciarSesion(event) {
 
         alert("Inicio de sesión correcto");
 
-        // Ir a otra página
-        // window.location.href = "inicio.html";
+        
 
     } else {
 
