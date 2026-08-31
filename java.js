@@ -1,53 +1,35 @@
-function registrar() {
+function iniciarSesion(event) {
 
-    let usuario = document.getElementById("usuarioRegistro").value;
-    let correo = document.getElementById("correoRegistro").value;
-    let contrasena = document.getElementById("contrasenaRegistro").value;
-    let confirmar = document.getElementById("confirmarRegistro").value;
+    event.preventDefault();
 
-    // Verificar campos vacíos
-    if (usuario == "" || correo == "" || contrasena == "" || confirmar == "") {
-        alert("Llene todos los campos");
-        return;
-    }
+    let usuario = document.getElementById("username").value;
+    let contrasena = document.getElementById("password").value;
 
-    // Verificar contraseñas
-    if (contrasena != confirmar) {
-        alert("Las contraseñas no coinciden");
-        return;
-    }
 
-    // Crear usuario
-    let nuevoUsuario = {
-        usuario: usuario,
-        correo: correo,
-        contrasena: contrasena
-    };
-
-    // Obtener usuarios que ya existen
+    // Obtener usuarios guardados
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-    // Verificar si el usuario ya existe
-    let existe = usuarios.some(function(user) {
-        return user.usuario == usuario;
+
+    // Buscar si existe el usuario con esa contraseña
+    let encontrado = usuarios.find(function(user) {
+
+        return user.usuario == usuario &&
+               user.contrasena == contrasena;
+
     });
 
-    if (existe) {
-        alert("Ese usuario ya está registrado");
-        return;
+
+    if (encontrado) {
+
+        alert("Inicio de sesión correcto");
+
+        // Ir a otra página
+        // window.location.href = "inicio.html";
+
+    } else {
+
+        alert("Usuario o contraseña incorrectos");
+
     }
 
-    // Agregar nuevo usuario
-    usuarios.push(nuevoUsuario);
-
-    // Guardar en localStorage
-    localStorage.setItem("usuarios", JSON.stringify(usuarios));
-
-    alert("Usuario registrado correctamente");
-
-    // Limpiar campos
-    document.getElementById("usuarioRegistro").value = "";
-    document.getElementById("correoRegistro").value = "";
-    document.getElementById("contrasenaRegistro").value = "";
-    document.getElementById("confirmarRegistro").value = "";
 }
