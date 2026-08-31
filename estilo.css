@@ -34,3 +34,30 @@ h1{
     padding: 20px;
     width: 50%;
 }
+
+.anuncio {
+    width: 80%;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #e5c33d;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.anuncio h2 {
+    color: #002b50;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.anuncio p {
+    color: #111;
+    font-size: 18px;
+}
+
+
+
+.anuncio button:hover {
+    background-color: #005b8f;
+}
