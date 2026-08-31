@@ -1,30 +1,39 @@
-function iniciarSesion() {
-    let usuario = document.getElementById("usuario").value;
-    let contrasena = document.getElementById("contrasena").value;
-
-    if (usuario === "admin" && contrasena === "1234") {
-        alert("Inicio de sesión correcto");
-    } else {
-        alert("Usuario o contraseña incorrectos");
-    }
-}
-
 function registrar() {
 
-    let usuario = document.getElementById("usuario").value;
-    let correo = document.getElementById("correo").value;
-    let contrasena = document.getElementById("contrasena").value;
-    let confirmar = document.getElementById("confirmar").value;
+    let usuario =
+        document.getElementById("usuarioRegistro").value;
 
-    if (usuario === "" || correo === "" || contrasena === "" || confirmar === "") {
-        alert("Debe llenar todos los campos");
+    let correo =
+        document.getElementById("correoRegistro").value;
+
+    let contrasena =
+        document.getElementById("contrasenaRegistro").value;
+
+    let confirmar =
+        document.getElementById("confirmarRegistro").value;
+
+
+    if (
+        usuario == "" ||
+        correo == "" ||
+        contrasena == "" ||
+        confirmar == ""
+    ) {
+
+        alert("Llene todos los campos");
+
         return;
     }
 
-    if (contrasena !== confirmar) {
+
+    if (contrasena != confirmar) {
+
         alert("Las contraseñas no coinciden");
+
         return;
     }
+
 
     alert("Usuario registrado correctamente");
+
 }
