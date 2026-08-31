@@ -28,9 +28,6 @@
 
     <div class="padre">
 
-
-        <!-- INICIO DE SESIÓN -->
-
         <div class="hijo">
 
             <center>
@@ -156,9 +153,6 @@
 
             let confirmar = document.getElementById("confirmarRegistro").value;
 
-
-            // Verificar que no haya campos vacíos
-
             if (
                 usuario == "" ||
                 correo == "" ||
@@ -172,9 +166,6 @@
 
             }
 
-
-            // Verificar contraseñas
-
             if (contrasena != confirmar) {
 
                 alert("Las contraseñas no coinciden");
@@ -183,13 +174,7 @@
 
             }
 
-
-            // Obtener los usuarios guardados
-
             let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-
-            // Verificar si el usuario ya existe
 
             let usuarioExiste = usuarios.find(function(user) {
 
@@ -206,9 +191,6 @@
 
             }
 
-
-            // Crear nuevo usuario
-
             let nuevoUsuario = {
 
                 usuario: usuario,
@@ -220,20 +202,13 @@
             };
 
 
-            // Agregar usuario al arreglo
-
             usuarios.push(nuevoUsuario);
 
-
-            // Guardar en localStorage
 
             localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
 
             alert("Usuario registrado correctamente");
-
-
-            // Limpiar los campos
 
             document.getElementById("usuarioRegistro").value = "";
 
@@ -257,12 +232,7 @@
             let contrasena = document.getElementById("password").value;
 
 
-            // Obtener usuarios guardados
-
             let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-
-            // Buscar usuario y contraseña
 
             let usuarioEncontrado = usuarios.find(function(user) {
 
@@ -275,9 +245,6 @@
             if (usuarioEncontrado) {
 
                 alert("Inicio de sesión correcto");
-
-                // Aquí puedes mandar al usuario a otra página
-                // window.location.href = "inicio.html";
 
             } else {
 
