@@ -20,6 +20,7 @@ function iniciarSesion(event) {
     if (encontrado) {
 
         alert("Inicio de sesión correcto");
+        window.location.href = "pagina2.html";
 
         
 
