@@ -61,3 +61,13 @@ h1{
 .anuncio button:hover {
     background-color: #005b8f;
 }
+
+.contenido{
+    width: 80%;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #e5c33d;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
