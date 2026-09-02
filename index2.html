@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Nexora - Inicio</title>
+
+    <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
-    
+
+    <div class="anuncio">
+
+        <h1>🚀 ¡Bienvenido a Nexora!</h1>
+
+        <p>
+            Has iniciado sesión correctamente.
+        </p>
+
+    </div>
+
+    <div class="contenido">
+
+        <h1>Bienvenido a tu cuenta</h1>
+
+        <p>
+            Ahora puedes comenzar a explorar Nexora.
+        </p>
+
+        <button onclick="cerrarSesion()">
+            Cerrar sesión
+        </button>
+
+    </div>
+
+    <script>
+
+        function cerrarSesion() {
+
+            window.location.href = "index.html";
+
+        }
+
+    </script>
+
 </body>
+
 </html>
