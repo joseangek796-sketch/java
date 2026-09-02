@@ -71,3 +71,24 @@ h1{
     text-align: center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
 }
+
+.contexto{
+    display: flex;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #e5c33d;
+    border-radius: 15px;
+    text-align: center;
+    gap: 20px;
+}
+
+.contexto1{
+    background: #53a6f3;
+    width: 50%;
+    border-radius: 10px;
+}
+.contexto2{
+    background: #53a6f3;
+    width: 50%;
+    border-radius: 10px;
+}
