@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    background: linear-gradient(to right, #3498db, #003566);
+    font-family: georgia, serif;
+}
+
+.anuncio {
+    width: 80%;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #e5c33d;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.carrusel {
+    height: 100vh;
+    align-items: center;
+}
+
+.carrusel-items {
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 30px 0px;
+    background-color: #DEBC3F;
+}
+
+.carrusel-item {
+    min-width: 300px;
+    max-width: 300px;
+    height: 200px;
+    outline: 2px solid black;
+    cursor: pointer;
+}
+
+.carrusel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carrusel-item:hover {
+    transform: scale(1.2);
+}

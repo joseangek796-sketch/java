@@ -28,3 +28,4 @@ carruselElemento.addEventListener("mouseout", () => {
 });
 
 iniciarDesplazamiento();
+
