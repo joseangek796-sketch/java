@@ -1,0 +1,13 @@
+body{
+    background: linear-gradient(to right,#3498db,#003566);
+    font-family:georgia, serif;
+}
+.anuncio {
+    width: 80%;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #e5c33d;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
