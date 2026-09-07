@@ -19,13 +19,7 @@ const detenerDesplazamiento = () => {
   clearInterval(intervaloDesplazamiento);
 };
 
-carruselElemento.addEventListener("mouseover", () => {
-  detenerDesplazamiento();
-});
 
-carruselElemento.addEventListener("mouseout", () => {
-  iniciarDesplazamiento();
-});
 
 iniciarDesplazamiento();
 
