@@ -21,7 +21,7 @@ function iniciarSesion(event) {
 
         alert("Inicio de sesión correcto");
         
-        window.location.href = "index2.html";
+        window.location.href = "index4.html";
         
 
     } else {
