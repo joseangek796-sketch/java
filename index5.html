@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,64 @@
     <link rel="stylesheet" href="estilo3.css">
     <script src="java3.js"></script>
 </head>
+
 <body>
 
     <h1><span>Electronica</span></h1>
 
     <div class="img-gallery">
-        <img src="https://softacademy.com.mx/wp-content/uploads/2024/05/electronicaconceptos.png" onclick="mostrarImagenCompleta(this.src)" alt="">
-        <img src="https://th.bing.com/th/id/OIP.BHyV17uGZ3n_2kEgxilMUwHaDf?w=308&h=165&c=7&r=0&o=7&pid=1.7&rm=3" onclick="mostrarImagenCompleta(this.src)" alt="">
-        <img src="img/elec1.webp" onclick="mostrarImagenCompleta(this.src)" alt="">
-        <img src="img/elec3.webp" onclick="mostrarImagenCompleta(this.src)" alt="">
-        <img src="img/elec.webp" onclick="mostrarImagenCompleta(this.src)" alt="">
-        <img src="img/elec2.jpg" onclick="mostrarImagenCompleta(this.src)" alt="">
-        <img src="img/elect4.webp" onclick="mostrarImagenCompleta(this.src)" alt="">
-        <img src="img/elect5.webp" onclick="mostrarImagenCompleta(this.src)" alt="">
+        <img src="https://softacademy.com.mx/wp-content/uploads/2024/05/electronicaconceptos.png"
+            onclick="mostrarImagenCompleta(this.src)" alt="" width="300px">
+        <img src="https://th.bing.com/th/id/OIP.BHyV17uGZ3n_2kEgxilMUwHaDf?w=308&h=165&c=7&r=0&o=7&pid=1.7&rm=3"
+            onclick="mostrarImagenCompleta(this.src)" alt="" width="300px">
+        <img src="img/elec1.webp" onclick="mostrarImagenCompleta(this.src)" alt="" width="300px">
+        <img src="img/elec3.webp" onclick="mostrarImagenCompleta(this.src)" alt="" width="300px" height="300px">
+        <img src="img/elec.webp" onclick="mostrarImagenCompleta(this.src)" alt="" width="300px">
+        <img src="img/elec2.jpg" onclick="mostrarImagenCompleta(this.src)" alt="" width="300px">
+    </div>
+
+    <div class="contexto">
+
+        <div class="contexto1">
+            <h1>¿Que es la electrónica?</h1>
+            <p>La electrónica es una rama de la física aplicada que comprende la física, la ingeniería, la tecnología y las aplicaciones que tratan con la emisión, el flujo y el control de los electrones u otras partículas cargadas eléctricamente en el vacío y la materia. La identificación del electrón en 1897, junto con la invención del tubo de vacío, que podía amplificar y rectificar pequeñas señales eléctricas, inauguraron el campo de la electrónica y la edad del electrón.</p>
+            <br>
+            <p>La electrónica trata con circuitos eléctricos que involucran componentes eléctricos activos como tubos de vacío, transistores, diodos, circuitos integrados, optoelectrónica y sensores, asociados con componentes eléctricos pasivos y tecnologías de interconexión. Generalmente los dispositivos electrónicos contienen circuitos que consisten principalmente, o exclusivamente, en semiconductores activos complementados con elementos pasivos; tal circuito se describe como un circuito electrónico.</p>
+        </div>
+
+        <div class="contexto2">
+            <h1>Enrutamiento IPV4</h1>
+            <p>el enrutamiento en IPv4 es el proceso de determinar la ruta que deben tomar los paquetes de datos para
+                llegar a su destino en una red.</p>
+            <h3>Mascara de subred</h3>
+            <p>La dirección IP es la dirección que te asigna tu ISP, empresas que dan acceso a Internet como Claro,
+                Tigo,etc. y sirve para identificarte dentro de Internet cuando te conectas. Nadie puede navegar por la
+                red sin una IP, y ninguna página web puede estar online si no tiene una IP asociada</p>
+            <h3>como funciona el enrutamiento</h3>
+            <p>El enrutamiento en IPv4 funciona mediante la utilización de tablas de enrutamiento que contienen
+                información sobre las rutas disponibles en la red. Cuando un paquete de datos llega a un router, este lo
+                examina y determina la mejor ruta para enviarlo hacia su destino.</p>
+        </div>
+
     </div>
     <script src="script.js"></script>
+
+    <div class="contenido">
+
+
+
+        <button onclick="paginaSiguiente()">
+            Pagina siguiente
+        </button>
+
+    </div>
+    <script>
+        function paginaSiguiente() {
+
+            window.location.href = "index6.html";
+
+        }
+    </script>
 </body>
+
 </html>
